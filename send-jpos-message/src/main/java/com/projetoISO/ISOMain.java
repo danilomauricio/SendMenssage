@@ -1,21 +1,16 @@
-package com.brenohff.projetoISO;
+package com.projetoISO;
 
 import org.jpos.iso.ISOException;
 import org.jpos.iso.ISOMsg;
 import org.jpos.iso.ISOUtil;
-import org.jpos.iso.channel.ASCIIChannel;
-import org.jpos.iso.channel.PADChannel;
-import org.jpos.iso.channel.PostChannel;
 import org.jpos.iso.channel.VAPChannel;
 import org.jpos.iso.packager.GenericPackager;
-import org.jpos.iso.packager.ISO87APackager;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Random;
 import java.util.TimeZone;
-import java.util.concurrent.TimeUnit;
 
 public class ISOMain {
 
@@ -29,13 +24,12 @@ public class ISOMain {
 
     private void execute(ISOMsg isoMsg) {
       try {
-        	
- 
+
             //GenericPackager packager = new GenericPackager("C:/Users/danilo.silva/Documents/Pakages/cfg/packager/iso87ebcdic_master.xml");
             //ASCIIChannel channel = new ASCIIChannel("localhost", 9898, packager);
 
-            GenericPackager packager = new GenericPackager("C:/Users/danilo.silva/Documents/JPOS/pacote teste/cfg/packager/base1_2010.xml");
-            VAPChannel channel = new VAPChannel("localhost", 6666, packager);
+            GenericPackager packager = new GenericPackager("/Users/danilomauriciodasilva/Documents/Desenvolvimento/sendJPOSmenssage/send-jpos-message/src/main/java/com/projetoISO/cfg/base1_2010.xml");
+            VAPChannel channel = new VAPChannel("localhost", 8989, packager);
 //
 ////            GenericPackager packager = new GenericPackager("C:/Users/danilo.silva/Documents/JPOS/pacote teste/cfg/packager/iso87ebcdic_master.xml");
 ////           PostChannel channel = new PostChannel("localhost", 3333, packager);

@@ -1,4 +1,4 @@
-package com.brenohff.projetoISO;
+package com.projetoISO;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
